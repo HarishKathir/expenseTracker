@@ -1,0 +1,12 @@
+:root{
+    --primary-White: rgb(255, 255, 255);
+    --primary-Shadow : rgb(0,0,0 ,0.2);
+    --primary-Light-Green: rgb(137, 179, 116);
+    --primary-Dark-Green: rgb(42, 55, 38);
+    --primary-Grey: rgb(184, 184, 184);
+    --BG-Grey : rgba(184,184,184,0.1);
+
+    --Gradient-Dark-Green: rgb(59, 77, 50);
+    --Gradient-Mid-Green: rgb(96, 126, 81);
+    --Gradient-Light-Green: rgb(137, 179, 116);
+}

@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base styles for the container */
+.container-fluid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Make the container fill the entire viewport height */
+    padding: 20px;
+    background-color: var(--BG-Grey);
+}
+
+/* Styles for the row */
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Ensure the row stretches across the container */
+    max-width: 1200px; /* Optional: Limit the max width of the content */
+    box-shadow: 10px 10px 40px var(--primary-Shadow);
+    border-radius: 10px;
+    overflow: hidden; /* Ensures gradient overflow is hidden */
+}
+
+/* Styles for the Logo section */
+.Logo {
+    flex: 1; /* Take up remaining space in the row */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: conic-gradient(from -175deg,
+            var(--Gradient-Dark-Green) 0%,
+            var(--Gradient-Mid-Green) 30%,
+            var(--Gradient-Light-Green) 58%,
+            var(--Gradient-Dark-Green) 90%);
+    border-radius: 10px 0 0 10px; /* Rounded corners on the left */
+    padding: 20px;
+    height: 100%; /* Make the Logo div fill the entire height */
+}
+
+.Logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.Logo p{
+    letter-spacing: 1em ;
+    color: var(--primary-White);
+}
+
+/* Styles for the login form */
+.login {
+    flex: 1; /* Take up remaining space in the row */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-White);
+    padding: 20px;
+    border-radius: 0 10px 10px 0; /* Rounded corners on the right */
+    height: 100%; /* Make the login form fill the entire height */
+}
+
+form {
+    width: 100%; /* Ensure the form stretches across the login div */
+    max-width: 400px; /* Optional: Limit the max width of the form */
+}
+
+form h1 {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+form label {
+    margin-bottom: 10px;
+}
+
+form input[type="text"],
+form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+form .rememberMe {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+form .rememberMe input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+form .signInOptions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+form .signInOptions a{
+    text-decoration: none;
+    color: var(--Gradient-Dark-Green);
+    transition: font-weight 0.1s ease-in-out;
+
+}
+form .signInOptions a:hover{
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Styles for sign-in with Google button */
+form .signInwithGoogle {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+
+}
+form .signInwithGoogle button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: var(--primary-White);
+    border: 1px solid black;
+}
+
+form .signInwithGoogle button:hover {
+    background-color: var(--primary-Light-Green);
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 425px) {
+    .row {
+        flex-direction: column; /* Stack columns vertically on smaller screens */
+    }
+    
+    .Logo, .login {
+        border-radius: 10px; /* Adjust border radius for stacked layout */
+    }
+    
+    .Logo {
+        border-radius: 10px 10px 0 0; /* Rounded corners on top for Logo section */
+    }
+    
+    .login {
+        border-radius: 0 0 10px 10px; /* Rounded corners on bottom for login section */
+    }
+    
+    form {
+        max-width: 100%; /* Full width for form on smaller screens */
+    }
+    
+    form .signInwithGoogle button {
+        width: 100%; /* Auto width for sign-in with Google button */
+    }
+}
+
