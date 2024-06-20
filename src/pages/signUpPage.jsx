@@ -26,7 +26,7 @@ const signUpPage = () => {
     }));
   };
 
-  const handleSignUp = async (e) => {
+  const handleSignUp = async(e) => {
     e.preventDefault();
 
     // Reset previous error and loading state
